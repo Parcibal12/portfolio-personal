@@ -1,0 +1,37 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Variables de diseño */
+  :root {
+    --color-primario: #1a73e8;
+    --color-fondo: #f5f5f5;
+    --color-texto: #333333;
+    --font-base: 'Inter', sans-serif;
+    --espacio-medio: 1rem;
+  }
+  
+  /* Estilos base */
+  body {
+    font-family: var(--font-base);
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    color: var(--color-primario);
+    margin-bottom: var(--espacio-medio);
+  }
+  
+  /* Hero */
+  #hero {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  
+  /* (Continúa luego con proyectos, blog, etc.) */
+  
