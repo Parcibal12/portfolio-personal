@@ -142,7 +142,7 @@
 }
 
 #blog h2 {
-  font-weight: 700;           /* Inter Bold */
+  font-weight: 700;           
   font-size: 40px;
   line-height: 50px;
   color: var(--color-texto);
@@ -330,5 +330,29 @@
 .social-links img:hover {
   transform: scale(1.1);
 }
+/* HERO */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
 
-  
+.footer-container p {
+  margin: 5px 0;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0255E5;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.back-to-top:hover {
+  text-decoration: underline;
+}
