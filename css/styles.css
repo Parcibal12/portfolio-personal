@@ -206,63 +206,53 @@
   margin-top: var(--espacio-pequeño);
 }
 
-/* 4. SOBRE MÍ */
-#sobre-mi {
-  background-color: var(--color-secundario);
-  padding: var(--espacio-grande) var(--espacio-medio);
+/*SOBRE MÍ*/
+.sobre-mi {
+  background-color: #F5F6F7;
+  padding: 60px 20px;
   text-align: center;
 }
 
-#sobre-mi h2 {
-  font-family: var(--font-base);
-  font-weight: 700;           /* Inter Bold */
-  font-size: 40px;
-  line-height: 50px;
-  color: var(--color-texto);
-  margin-bottom: var(--espacio-grande);
+.sobre-mi h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  color: #000000;
+  margin-bottom: 40px;
 }
 
-.sobre-mi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--espacio-grande);
-  max-width: 1200px;
-  margin: 0 auto;
+.subsection {
+  margin-bottom: 50px;
   text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Texto de perfil y hobbies */
-.perfil-profesional p,
-.hobbies p {
-  font-family: var(--font-base);
-  font-weight: 400;           /* Inter Regular */
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--color-texto);
-  margin-bottom: var(--espacio-grande);
-}
-
-/* Subtítulos */
-#sobre-mi h3 {
-  font-family: var(--font-base);
-  font-weight: 700;           /* Inter Bold */
+.subsection h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
   font-size: 26px;
-  color: var(--color-primario);
-  margin-bottom: var(--espacio-pequeño);
+  color: #000000;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #DADADA;
+  padding-bottom: 5px;
 }
 
-/* Listas */
-.sobre-mi-grid ul {
-  list-style: disc inside;
-  margin-bottom: var(--espacio-grande);
-}
-
-.sobre-mi-grid li {
-  font-family: var(--font-base);
-  font-weight: 400;           /* Inter Regular */
+.subsection p,
+.subsection ul,
+.subsection div {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
-  color: var(--color-texto);
-  margin-bottom: var(--espacio-pequeño);
+  color: #333333;
 }
 
+.subsection ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.skills div {
+  margin-bottom: 10px;
+}
