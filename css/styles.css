@@ -1,37 +1,119 @@
-/* Reset básico */
+/* RESET + BOX-SIZING */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Variables de diseño */
-  :root {
-    --color-primario: #1a73e8;
+}
+
+/* VARIABLES */
+:root {
+    --color-primario: #0255E5;
+    --color-secundario: #ffffff;
     --color-fondo: #f5f5f5;
     --color-texto: #333333;
+    --color-borde: #dddddd;
+
     --font-base: 'Inter', sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.6;
+
+    --espacio-pequeño: 0.5rem;
     --espacio-medio: 1rem;
-  }
-  
-  /* Estilos base */
-  body {
+    --espacio-grande: 2rem;
+}
+
+/* ESTILOS BASE */
+body {
     font-family: var(--font-base);
-    background: var(--color-fondo);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
     color: var(--color-texto);
-    line-height: 1.6;
-  }
-  
-  h1, h2, h3 {
+    background-color: var(--color-fondo);
+}
+
+h1, h2, h3 {
     color: var(--color-primario);
     margin-bottom: var(--espacio-medio);
-  }
-  
-  /* Hero */
-  #hero {
+}
+
+p, ul {
+    margin-bottom: var(--espacio-medio);
+}
+
+/* HERO */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 4rem 1rem;
-  }
-  
-  /* (Continúa luego con proyectos, blog, etc.) */
-  
+    padding: var(--espacio-grande) var(--espacio-medio);
+    background-color: var(--color-secundario);
+}
+
+#hero nav ul {
+    display: flex;
+    gap: var(--espacio-medio);
+    list-style: none;
+    margin-bottom: var(--espacio-medio);
+}
+
+#hero nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 80px;
+    width: 94px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#hero .hero-content h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: #0255E5;
+    margin-bottom: var(--espacio-medio);
+}
+
+#hero .hero-content p {
+    font-family: 'Inter', sans-serif;
+    font-weight: regular;
+    font-size: 24px;
+    color: #8B8B8B;
+}
+
+/* PARA LOS PROYECTOS */
+.proyectos-grid {
+    display: grid;
+    gap: var(--espacio-grande);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: var(--espacio-grande) var(--espacio-medio);
+}
+
+.tarjeta-proyecto {
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-proyecto img {
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta-proyecto h3 {
+    margin: var(--espacio-medio);
+}
+
+.tarjeta-proyecto p {
+    margin: 0 var(--espacio-medio) var(--espacio-medio);
+}
