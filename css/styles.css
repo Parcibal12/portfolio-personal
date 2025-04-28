@@ -258,76 +258,77 @@
 }
 
 /* Sección de Contacto */
-.contacto {
+#contacto {
   background-color: #F5F6F7;
-  padding: var(--espacio-grande) var(--espacio-medio);
+  padding: 60px 20px;
   text-align: center;
 }
 
-.contacto h2 {
+#contacto h2 {
   font-family: 'Inter', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 40px;
-  color: #333;
-  margin-bottom: var(--espacio-medio);
-}
-
-.contacto p {
-  font-family: 'Inter', sans-serif;
-  font-weight: regular;
-  font-size: 18px;
-  color: #333;
-  margin-bottom: var(--espacio-grande);
+  color: #333333;
+  margin-bottom: 20px;
 }
 
 .contact-form {
+  max-width: 500px;
+  margin: 0 auto 30px;
   display: flex;
   flex-direction: column;
-  gap: var(--espacio-pequeño);
-  max-width: 500px;
-  margin: 0 auto;
+  gap: var(--espacio-medio);
   text-align: left;
 }
 
 .contact-form label {
   font-family: 'Inter', sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
-  color: #333;
+  margin-bottom: 8px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #dddddd;
+  border-radius: 25px;           /* Esquinas más redondeadas */
   font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
 
 .contact-form button {
+  align-self: center;
+  padding: 10px 30px;
   background-color: var(--color-primario);
-  color: white;
+  color: #ffffff;
   border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 8px;
+  border-radius: 25px;           /* Esquinas más redondeadas */
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
   cursor: pointer;
-  margin-top: var(--espacio-medio);
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-  background-color: #024B9F;
+  background-color: #0042cc;
 }
 
-/* Redes sociales */
 .social-links {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: var(--espacio-grande);
 }
 
-.social-icon img {
+.social-links img {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s ease;
 }
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+  
