@@ -256,3 +256,78 @@
 .skills div {
   margin-bottom: 10px;
 }
+
+/* Sección de Contacto */
+.contacto {
+  background-color: #F5F6F7;
+  padding: var(--espacio-grande) var(--espacio-medio);
+  text-align: center;
+}
+
+.contacto h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: var(--espacio-medio);
+}
+
+.contacto p {
+  font-family: 'Inter', sans-serif;
+  font-weight: regular;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: var(--espacio-grande);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-pequeño);
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form label {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: var(--espacio-medio);
+}
+
+.contact-form button:hover {
+  background-color: #024B9F;
+}
+
+/* Redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: var(--espacio-grande);
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+}
