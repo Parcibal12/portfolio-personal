@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portafolio de Daniel Irigoyen – Proyectos web, blog y contacto">
   <title>Portafolio | Daniel Irigoyen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <!-- Hero -->
   <header id="hero">
     <nav>
       <ul>
@@ -23,6 +26,32 @@
       <p>Desarrollador Web | Frontend &amp; Backend</p>
     </div>
   </header>
+
+  <!-- Proyectos Destacados -->
+  <section id="proyectos">
+    <h2>Proyectos Destacados</h2>
+    <div class="proyectos-grid">
+      <article class="tarjeta-proyecto">
+        <time datetime="2024-06-04">4 de junio 2024</time>
+        <h3>Landing Page Responsiva</h3>
+        <p>Una landing page responsiva diseñada para promocionar un producto o evento. Utilicé HTML, CSS y JavaScript para asegurarme de que se viera bien en todas las plataformas (móvil, tablet y escritorio). La página incluye un formulario de contacto, animaciones al hacer scroll y un diseño limpio y profesional.</p>
+        <p class="tecnologias">Tecnologías: HTML, CSS, JavaScript</p>
+      </article>
+      <article class="tarjeta-proyecto">
+        <time datetime="2024-10-10">10 de octubre 2024</time>
+        <h3>API RESTful con Node.js y Express</h3>
+        <p>Una API RESTful que permite gestionar un catálogo de productos. Los usuarios pueden realizar operaciones CRUD (crear, leer, actualizar y eliminar) sobre los productos. La API está construida con Node.js y Express, y está conectada a una base de datos MongoDB para el almacenamiento de datos.</p>
+        <p class="tecnologias">Tecnologías: Node.js, Express, JavaScript</p>
+      </article>
+      <article class="tarjeta-proyecto">
+        <time datetime="2024-11-04">4 de noviembre 2024</time>
+        <h3>Aplicación de Blog con Autenticación de Usuario</h3>
+        <p>Una aplicación de blog en la que los usuarios pueden registrarse, iniciar sesión y crear publicaciones. Los usuarios autenticados pueden editar y eliminar sus propios artículos. Utilicé JWT para la autenticación y almacenamiento de sesiones. La aplicación incluye características como un editor de texto enriquecido para crear publicaciones.</p>
+        <p class="tecnologias">Tecnologías: Node.js, HTML, CSS, JavaScript</p>
+      </article>
+    </div>
+  </section>
+
   <script src="js/main.js"></script>
 </body>
 </html>
