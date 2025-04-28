@@ -4,9 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portafolio de Daniel Irigoyen – Proyectos web, blog y contacto">
+  <meta name="author" content="Daniel Irigoyen">
   <title>Portafolio | Daniel Irigoyen</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Metaetiquetas -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portafolio | Daniel Irigoyen">
+  <meta property="og:description" content="Portafolio de Daniel Irigoyen – Proyectos web, blog y contacto">
+  <meta property="og:url" content="https://parcibal12.github.io/portfolio-personal/">
+  <meta property="og:image" content="https://parcibal12.github.io/portfolio-personal/images/portafolio-image.jpg">
+
+  <!-- Metaetiquetas para mejorar SEO -->
+  <meta name="robots" content="index, follow">
 </head>
 <body>
 
@@ -51,7 +62,8 @@
       </article>
     </div>
   </section>
-  <!-- 3. Blog / Artículos Recientes -->
+
+  <!-- Blog / Artículos Recientes -->
   <section id="blog">
     <h2>Artículos Recientes</h2>
     <div class="blog-grid">
@@ -78,24 +90,22 @@
       </article>
     </div>
   </section>
+
   <!-- Sobre mí -->
   <section id="sobre-mi" class="sobre-mi">
     <h2>Sobre mí</h2>
-  
     <div class="subsection">
       <h3>Perfil Profesional</h3>
-      <p>
-        Estudiante de Ingeniería de Software con enfoque en el desarrollo de soluciones tecnológicas eficientes y escalables. Me encuentro en constante aprendizaje de metodologías y herramientas modernas de programación.
-      </p>
+      <p>Estudiante de Ingeniería de Software con enfoque en el desarrollo de soluciones tecnológicas eficientes y escalables. Me encuentro en constante aprendizaje de metodologías y herramientas modernas de programación.</p>
     </div>
-  
+
     <div class="subsection">
       <h3>Educación</h3>
       <ul>
         <li>Ingeniería de Software - Universidad Catolica (En curso)</li>
       </ul>
     </div>
-  
+
     <div class="subsection">
       <h3>Experiencia</h3>
       <ul>
@@ -103,22 +113,16 @@
         <li>Prácticas de programación Frontend y Backend</li>
       </ul>
     </div>
-  
+
     <div class="subsection">
       <h3>Skills</h3>
       <div class="skills">
-        <div>
-          <strong>Frontend:</strong> HTML, CSS, JavaScript, Figma
-        </div>
-        <div>
-          <strong>Backend:</strong> Node.js, Express, MongoDB
-        </div>
-        <div>
-          <strong>Herramientas:</strong> Git, GitHub, Visual Studio Code
-        </div>
+        <div><strong>Frontend:</strong> HTML, CSS, JavaScript, Figma</div>
+        <div><strong>Backend:</strong> Node.js, Express, MongoDB</div>
+        <div><strong>Herramientas:</strong> Git, GitHub, Visual Studio Code</div>
       </div>
     </div>
-  
+
     <div class="subsection">
       <h3>Hobbies</h3>
       <ul>
@@ -126,22 +130,23 @@
       </ul>
     </div>
   </section>
+
   <!-- Contacto -->
   <section id="contacto" class="contact">
     <h2>Contáctame</h2>
     <form action="#" method="POST" class="contact-form">
       <label for="name">Nombre</label>
       <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
-  
+
       <label for="email">Correo electrónico</label>
       <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
-  
+
       <label for="message">Mensaje</label>
       <textarea id="message" name="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
-  
+
       <button type="submit">Enviar</button>
     </form>
-  
+
     <div class="social-links">
       <a href="https://github.com/Parcibal12" target="_blank">
         <img src="images/github.svg" alt="GitHub">
@@ -152,16 +157,11 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Daniel Irigoyen | Ingeniería de Software</p>
-      <p>Última actualización: Abril 2025</p>
-      <a href="#top" class="back-to-top">Volver arriba ↑</a>
-    </div>
+    <p>&copy; 2025 Daniel Irigoyen. Todos los derechos reservados.</p>
   </footer>
 
-  
-  <script src="js/main.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
+
