@@ -136,7 +136,7 @@
 
   /* Sección Blog / Artículos Recientes */
 #blog {
-  background-color: var(--color-fondo);  /* F5F6F7 */
+  background-color: var(--color-fondo);  
   padding: var(--espacio-grande) var(--espacio-medio);
   text-align: center;
 }
@@ -291,9 +291,9 @@
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #dddddd;
-  border-radius: 25px;           /* Esquinas más redondeadas */
+  border-radius: 50px;           
   font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
@@ -304,7 +304,7 @@
   background-color: var(--color-primario);
   color: #ffffff;
   border: none;
-  border-radius: 25px;           /* Esquinas más redondeadas */
+  border-radius: 50px;          
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   cursor: pointer;
