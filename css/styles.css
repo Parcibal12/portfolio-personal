@@ -517,3 +517,126 @@ footer {
         height: 130px; /* Aumentado desde 100px */
      }
 }
+/* --- SOBRE MÍ Mejorado --- */
+.sobre-mi {
+  background-color: var(--color-secundario, #ffffff); /* Fondo blanco o el secundario */
+  padding: 4rem var(--espacio-medio); /* Ajusta padding */
+  text-align: center;
+}
+
+.sobre-mi h2 {
+  font-weight: 700; /* Más consistente con otros títulos */
+  font-size: 2.5rem; /* Tamaño ajustado */
+  color: var(--color-texto, #333333);
+  margin-bottom: 3rem; /* Más espacio debajo del título */
+  position: relative;
+  display: inline-block; /* Para que el ::after se ajuste al texto */
+}
+
+/* Línea decorativa bajo el título */
+.sobre-mi h2::after {
+    content: '';
+    position: absolute;
+    width: 60px; /* Ancho de la línea */
+    height: 4px;
+    background-color: var(--color-primario, #0255E5);
+    bottom: -10px; /* Espacio bajo el texto */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.sobre-mi-container { /* Contenedor para las columnas */
+  display: flex;
+  flex-wrap: wrap; /* Para que las columnas se apilen en móvil */
+  gap: var(--espacio-grande, 2rem);
+  max-width: 1100px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar el contenedor */
+  text-align: left; /* Alinear texto a la izquierda dentro de las columnas */
+}
+
+.sobre-mi-columna {
+  flex: 1; /* Cada columna toma espacio igual */
+  min-width: 300px; /* Ancho mínimo antes de envolver */
+}
+
+.subsection {
+  margin-bottom: 2.5rem; /* Aumenta espacio entre subsecciones */
+  background-color: var(--color-fondo, #F5F6F7); /* Fondo sutil para cada subsección */
+  padding: var(--espacio-medio, 1rem) var(--espacio-grande, 2rem); /* Padding interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra muy sutil */
+}
+
+.subsection h3 {
+  font-weight: 600; /* Ligeramente menos pesado que h2 */
+  font-size: 1.5rem; /* Tamaño ajustado */
+  color: var(--color-primario, #0255E5); /* Color primario para títulos de subsección */
+  margin-bottom: 1rem; /* Espacio bajo el h3 */
+  border-bottom: none; /* Quitamos el borde anterior */
+  padding-bottom: 0;
+}
+
+.subsection p,
+.subsection ul {
+  font-size: 1rem; /* Tamaño base */
+  line-height: 1.6; /* Mejor interlineado */
+  color: var(--color-texto, #333333);
+}
+
+.subsection ul {
+  list-style-position: inside; /* Bolitas dentro del padding */
+  padding-left: 0; /* Quitamos padding izquierdo extra */
+}
+
+.subsection ul li {
+  margin-bottom: var(--espacio-pequeño, 0.5rem); /* Espacio entre items de lista */
+}
+
+/* Estilos para los Skills como tags */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap; /* Para que los tags se ajusten */
+  gap: var(--espacio-pequeño, 0.5rem); /* Espacio entre tags */
+}
+
+.skill-tag {
+  background-color: var(--color-primario, #0255E5);
+  color: var(--color-secundario, #ffffff);
+  padding: 0.3rem 0.8rem; /* Padding del tag */
+  border-radius: 15px; /* Bordes redondeados para forma de píldora */
+  font-size: 0.9rem; /* Tamaño de fuente del tag */
+  font-weight: 500;
+  white-space: nowrap; /* Evita que el texto del tag se rompa */
+  transition: transform 0.2s ease;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el ratón */
+}
+
+/* Ajustes responsivos (si usaste las columnas) */
+@media (max-width: 768px) {
+  .sobre-mi-container {
+    flex-direction: column; /* Apila las columnas */
+  }
+  .sobre-mi h2 {
+    font-size: 2rem; /* Reduce tamaño de título en móvil */
+  }
+  .subsection h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* --- Fin SOBRE MÍ Mejorado --- */
+
+/*SOBRE MÍ*/ /* Puedes comentar o eliminar estas reglas antiguas si aplicas las nuevas */
+/*
+.sobre-mi { ... }
+.sobre-mi h2 { ... }
+.subsection { ... }
+.subsection h3 { ... }
+.subsection p, .subsection ul, .subsection div { ... }
+.subsection ul { ... }
+.skills div { ... }
+*/
