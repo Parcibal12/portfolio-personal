@@ -428,30 +428,54 @@ footer {
 }
 
 .hero-content {
-  max-width: 800px; /* Limita el ancho del contenido para mejor lectura */
-  margin-top: 4rem; /* Espacio extra para compensar la nav absoluta */
-  padding: 0 1rem; /* Padding horizontal para evitar que toque los bordes en móvil */
+  max-width: 900px; /* Aumentamos un poco el max-width */
+  margin-top: 4rem;
+  padding: 0 1rem;
+  display: flex; /* Usamos Flexbox */
+  align-items: center; /* Alineamos verticalmente */
+  justify-content: center; /* Centramos horizontalmente */
+  gap: 2rem; /* Espacio entre texto e imagen */
+  text-align: left; /* Alineamos el texto a la izquierda */
+}
+
+.hero-text {
+  flex: 1; /* Permite que el texto ocupe el espacio disponible */
 }
 
 .hero-content h1 {
-  font-size: 3rem; /* Tamaño de fuente más grande para el título */
-  margin-bottom: 0.5rem; /* Menos espacio bajo el h1 */
-  font-weight: 700; /* Más peso para el título */
-  color: #212529; /* Un negro no tan fuerte */
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #212529;
 }
 
 .hero-content p {
-  font-size: 1.25rem; /* Tamaño de fuente más grande para el subtítulo */
-  color: #6c757d; /* Color grisáceo para el subtítulo */
-  margin-bottom: 0; /* Quita margen inferior si no hay más elementos */
+  font-size: 1.25rem;
+  color: #6c757d;
+  margin-bottom: 0;
   font-weight: 400;
 }
+
+.hero-avatar {
+  width: 200px; /* Aumentado desde 150px */
+  height: 200px; /* Aumentado desde 150px */
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid var(--color-primario, #007bff); 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
   #hero {
-    padding-top: 8rem; /* Más padding superior en móvil por la nav */
+    padding-top: 8rem;
     min-height: 50vh;
+  }
+  .hero-content {
+    flex-direction: column; /* Apilamos en pantallas medianas */
+    text-align: center; /* Centramos texto cuando está apilado */
+    gap: 1.5rem;
   }
   .hero-content h1 {
     font-size: 2.5rem;
@@ -459,27 +483,37 @@ footer {
   .hero-content p {
     font-size: 1.1rem;
   }
+  .hero-avatar {
+    width: 160px; /* Aumentado desde 120px */
+    height: 160px; /* Aumentado desde 120px */
+    margin-top: 1rem; /* Espacio arriba de la imagen */
+  }
   #hero nav ul {
-    gap: 1rem; /* Menos espacio entre enlaces en móvil */
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
     #hero nav ul {
-        flex-direction: column; /* Apila los enlaces en pantallas muy pequeñas */
+        flex-direction: column;
         align-items: center;
         gap: 0.5rem;
     }
     #hero nav {
         padding: 0.5rem 0;
-        position: relative; /* Cambia a relativo para que empuje el contenido */
-        background-color: #fff; /* Fondo sólido en móvil puede ser mejor */
+        position: relative;
+        background-color: #fff;
     }
      #hero {
-        padding-top: 2rem; /* Menos padding superior ya que la nav no es absoluta */
+        padding-top: 2rem;
         padding-bottom: 2rem;
      }
      .hero-content {
-         margin-top: 1rem; /* Menos margen superior */
+         margin-top: 1rem;
+         gap: 1rem; /* Menos espacio en móvil */
+     }
+     .hero-avatar {
+        width: 130px; /* Aumentado desde 100px */
+        height: 130px; /* Aumentado desde 100px */
      }
 }
