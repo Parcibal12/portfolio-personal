@@ -356,3 +356,130 @@ footer {
 .back-to-top:hover {
   text-decoration: underline;
 }
+/* --- Estilos para Header y Hero --- */
+
+#hero {
+  background-color: #f8f9fa; /* Un fondo claro y limpio */
+  /* O considera un gradiente sutil o una imagen de fondo: */
+  /* background: linear-gradient(to bottom, #eef1f5, #ffffff); */
+  /* background-image: url('../images/hero-background.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  color: #333; /* Color de texto principal oscuro para contraste */
+  padding: 6rem 1rem 4rem; /* Más espacio vertical, menos horizontal */
+  text-align: center;
+  min-height: 60vh; /* Asegura una altura mínima considerable */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  position: relative; /* Necesario para el posicionamiento absoluto de la nav */
+  overflow: hidden; /* Evita barras de scroll si la nav se sale un poco */
+}
+
+#hero nav {
+  position: absolute; /* Posiciona la navegación arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+  z-index: 1000; /* Asegura que esté por encima de otro contenido */
+}
+
+#hero nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centra los elementos del menú */
+  gap: 1.5rem; /* Espacio entre elementos del menú */
+}
+
+#hero nav ul li a {
+  text-decoration: none;
+  color: #555; /* Color de enlace más suave */
+  font-weight: 500; /* Un poco más de peso */
+  padding: 0.5rem 0; /* Padding vertical para área de click */
+  position: relative; /* Para el efecto hover */
+  transition: color 0.3s ease, transform 0.3s ease; /* Añade transición para transform */
+}
+
+#hero nav ul li a::after { /* Línea sutil bajo el enlace para hover */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px; /* Ligeramente debajo del texto */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff; /* Color de acento */
+  transition: width 0.3s ease;
+}
+
+#hero nav ul li a:hover {
+  color: #007bff; /* Cambia color al hacer hover */
+  transform: translateY(-2px); /* Efecto sutil de elevación */
+}
+
+#hero nav ul li a:hover::after {
+  width: 100%; /* Muestra la línea al hacer hover */
+}
+
+.hero-content {
+  max-width: 800px; /* Limita el ancho del contenido para mejor lectura */
+  margin-top: 4rem; /* Espacio extra para compensar la nav absoluta */
+  padding: 0 1rem; /* Padding horizontal para evitar que toque los bordes en móvil */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Tamaño de fuente más grande para el título */
+  margin-bottom: 0.5rem; /* Menos espacio bajo el h1 */
+  font-weight: 700; /* Más peso para el título */
+  color: #212529; /* Un negro no tan fuerte */
+}
+
+.hero-content p {
+  font-size: 1.25rem; /* Tamaño de fuente más grande para el subtítulo */
+  color: #6c757d; /* Color grisáceo para el subtítulo */
+  margin-bottom: 0; /* Quita margen inferior si no hay más elementos */
+  font-weight: 400;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  #hero {
+    padding-top: 8rem; /* Más padding superior en móvil por la nav */
+    min-height: 50vh;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  #hero nav ul {
+    gap: 1rem; /* Menos espacio entre enlaces en móvil */
+  }
+}
+
+@media (max-width: 480px) {
+    #hero nav ul {
+        flex-direction: column; /* Apila los enlaces en pantallas muy pequeñas */
+        align-items: center;
+        gap: 0.5rem;
+    }
+    #hero nav {
+        padding: 0.5rem 0;
+        position: relative; /* Cambia a relativo para que empuje el contenido */
+        background-color: #fff; /* Fondo sólido en móvil puede ser mejor */
+    }
+     #hero {
+        padding-top: 2rem; /* Menos padding superior ya que la nav no es absoluta */
+        padding-bottom: 2rem;
+     }
+     .hero-content {
+         margin-top: 1rem; /* Menos margen superior */
+     }
+}
