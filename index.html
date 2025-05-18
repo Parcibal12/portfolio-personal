@@ -7,13 +7,13 @@
   <meta name="author" content="Daniel Irigoyen">
   <title>Portafolio | Daniel Irigoyen</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/sections/hero.css">
-  <link rel="stylesheet" href="css/sections/projects.css">
-  <link rel="stylesheet" href="css/sections/blog.css">
-  <link rel="stylesheet" href="css/sections/about.css">
-  <link rel="stylesheet" href="css/sections/contact.css">
-  <link rel="stylesheet" href="css/sections/footer.css">
+  <link rel="stylesheet" href="blocks/styles.css">
+  <link rel="stylesheet" href="blocks/hero/hero.css">
+  <link rel="stylesheet" href="blocks/projects/projects.css">
+  <link rel="stylesheet" href="blocks/blog/blog.css">
+  <link rel="stylesheet" href="blocks/about/about.css">
+  <link rel="stylesheet" href="blocks/contacto/contact.css">
+  <link rel="stylesheet" href="blocks/footer/footer.css">
 
   <!-- Metaetiquetas -->
   <meta property="og:type" content="website">
@@ -113,7 +113,6 @@
           <h3 class="about__subsection-title">Hobbies</h3>
           <ul class="about__list">
             <li class="about__list-item">Música, cine</li>
-            <!-- Puedes añadir más hobbies aquí -->
           </ul>
         </div>
       </div>
@@ -152,27 +151,29 @@
 
   <!-- Contacto -->
   <section class="contact" id="contacto">
-    <h2 class="contact__title">Contáctame</h2>
-    <form action="#" method="POST" class="contact__form">
-      <label class="contact__label" for="name">Nombre</label>
-      <input class="contact__input" type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+    <div class="contact__card-wrapper">
+      <h2 class="contact__title">Contacto</h2>
+      <form action="#" method="POST" class="contact__form">
+        <label class="contact__label" for="name">Nombre</label>
+        <input class="contact__input" type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
 
-      <label class="contact__label" for="email">Correo electrónico</label>
-      <input class="contact__input" type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+        <label class="contact__label" for="email">Correo electrónico</label>
+        <input class="contact__input" type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
 
-      <label class="contact__label" for="message">Mensaje</label>
-      <textarea class="contact__textarea" id="message" name="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+        <label class="contact__label" for="message">Mensaje</label>
+        <textarea class="contact__textarea" id="message" name="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
 
-      <button class="contact__button" type="submit">Enviar</button>
-    </form>
+        <button class="contact__button" type="submit">Enviar</button>
+      </form>
 
-    <div class="contact__social">
-      <a class="contact__social-link" href="https://github.com/Parcibal12" target="_blank">
-        <img class="contact__social-icon" src="images/github.svg" alt="GitHub">
-      </a>
-      <a class="contact__social-link" href="https://www.linkedin.com/in/daniel-irigoyen-miranda-52628935b/" target="_blank">
-        <img class="contact__social-icon" src="images/LinkedIn_icon.svg.png" alt="LinkedIn">
-      </a>
+      <div class="contact__social">
+        <a class="contact__social-link" href="https://github.com/Parcibal12" target="_blank">
+          <img class="contact__social-icon" src="images/github.svg" alt="GitHub">
+        </a>
+        <a class="contact__social-link" href="https://www.linkedin.com/in/daniel-irigoyen-miranda-52628935b/" target="_blank">
+          <img class="contact__social-icon" src="images/LinkedIn_icon.svg.png" alt="LinkedIn">
+        </a>
+      </div>
     </div>
   </section>
 

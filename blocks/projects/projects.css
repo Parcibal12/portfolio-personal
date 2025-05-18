@@ -1,7 +1,11 @@
 .projects {
   background-color: var(--color-fondo);
-  padding: var(--espacio-grande) var(--espacio-medio);
   text-align: center;
+  padding-top: calc(var(--espacio-grande) + 40px);
+  padding-right: var(--espacio-medio);
+  padding-bottom: var(--espacio-grande);
+  padding-left: var(--espacio-medio);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .projects__title {

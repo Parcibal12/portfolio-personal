@@ -1,16 +1,29 @@
 .hero {
+  background-color: #DFDBE5;
+  background-image: url("../../images/textura-hero.svg");
+
+  background-position: center center; 
+  background-repeat: repeat; 
+
+  padding: 100px 20px; 
+  min-height: 70vh; 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: var(--espacio-grande) var(--espacio-medio);
-  background-color: var(--color-secundario);
-  text-align: center;
-  background-color: #f8f9fa;
-  padding: 6rem 1rem 4rem;
-  min-height: 60vh;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #333;
   position: relative;
-  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
 }
 
 .hero__nav {
@@ -34,8 +47,6 @@
   gap: 1.5rem;
 }
 
-.hero__nav-item {
-}
 
 .hero__nav-link {
   font-weight: 500;
