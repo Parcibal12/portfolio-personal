@@ -72,6 +72,39 @@
   margin-top: var(--espacio-pequeño);
 }
 
+.blog-card__actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.blog-card__button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.blog-card__button:hover {
+  background-color: rgba(2, 85, 229, 0.1);
+  color: var(--color-primario);
+}
+
+.blog-card__button.active {
+  color: var(--color-primario);
+}
+
+.blog-card__button i {
+  font-size: 16px;
+}
 
 @media (max-width: 480px) {
   .blog__title {
