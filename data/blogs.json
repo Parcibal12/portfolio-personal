@@ -1,0 +1,37 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 1,
+      "title": "5 técnicas de CSS para diseño responsive",
+      "overview": "En este artículo comparto cinco técnicas clave (uso de media queries, unidades relativas, Flexbox, Grid y mobile-first) para adaptar tus diseños a cualquier tamaño de pantalla. Incluye ejemplos de código y consejos prácticos para evitar los errores más comunes.",
+      "publish_date": "2025-03-03",
+      "likes_count": 0,
+      "saved": false,
+      "imageURL": "images/css-responsive.png",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": 2,
+      "title": "Mejora la accesibilidad web con ARIA roles",
+      "overview": "Comparo Flexbox y CSS Grid a través de ejemplos prácticos: cuándo elegir cada uno, cómo combinarlos y trucos para construir tanto cards como layouts complejos de varias columnas.",
+      "publish_date": "2025-02-20",
+      "likes_count": 0,
+      "saved": false,
+      "imageURL": "images/aria-accessibility.png",
+      "technologies": ["ARIA", "HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": 3,
+      "title": "Introducción a Figma para prototipado rápido",
+      "overview": "Un recorrido por las funciones básicas de Figma: frames, auto layout, componentes reutilizables y plugins esenciales. Perfecto si quieres pasar de la idea al prototipo en minutos.",
+      "publish_date": "2025-01-10",
+      "likes_count": 8,
+      "saved": false,
+      "imageURL": "images/figma-prototipo.png",
+      "technologies": ["Figma"]
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 3
+}
