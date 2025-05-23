@@ -28,133 +28,151 @@
 </head>
 <body>
 
-  <!-- Hero -->
-  <header class="hero" id="hero">
-    <nav class="hero__nav">
-      <ul class="hero__nav-list">
-        <li class="hero__nav-item"><a class="hero__nav-link" href="#hero">Inicio</a></li>
-        <li class="hero__nav-item"><a class="hero__nav-link" href="#proyectos">Proyectos</a></li>
-        <li class="hero__nav-item"><a class="hero__nav-link" href="#blog">Blog</a></li>
-        <li class="hero__nav-item"><a class="hero__nav-link" href="#sobre-mi">Sobre mí</a></li>
-        <li class="hero__nav-item"><a class="hero__nav-link" href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="hero__content">
-      <div class="hero__text">
-        <h1 class="hero__title">Hola, soy Daniel Irigoyen</h1>
-        <p class="hero__subtitle">Desarrollador Web | Frontend &amp; Backend</p>
+  <!-- Plantilla para Hero -->
+  <template id="hero-template">
+    <header class="hero" id="hero">
+      <nav class="hero__nav">
+        <ul class="hero__nav-list">
+          <!-- Rutas actualizadas -->
+          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/">Inicio</a></li>
+          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/proyectos">Proyectos</a></li>
+          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/blog">Blog</a></li>
+          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/sobre-mi">Sobre mí</a></li>
+          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1 class="hero__title">Hola, soy Daniel Irigoyen</h1>
+          <p class="hero__subtitle">Desarrollador Web | Frontend &amp; Backend</p>
+        </div>
+        <img src="images/profile-lego.png" alt="Avatar de Daniel Irigoyen estilo Lego" class="hero__avatar">
       </div>
-      <img src="images/profile-lego.png" alt="Avatar de Daniel Irigoyen estilo Lego" class="hero__avatar">
-    </div>
-  </header>
+    </header>
+  </template>
 
-  <!-- Proyectos Destacados -->
-  <section class="projects" id="proyectos">
-    <h2 class="projects__title">Proyectos Destacados</h2>
-    <div class="projects__grid">
-      <article class="project-card">
-        <time class="project-card__date" datetime="2024-06-04">4 de junio 2024</time>
-        <h3 class="project-card__title">Absorb – Tienda Web de Instrumentos Musicales</h3>
-        <p class="project-card__description">Una tienda e-commerce diseñada para ofrecer una experiencia de compra clara, confiable y enfocada en músicos jóvenes. Utilicé React y Figma para crear una interfaz intuitiva, categorizada mediante card sorting cerrado y validada con entrevistas cualitativas. Apliqué principios de usabilidad (Nielsen, Tognazzini) y metodologías como los 7 niveles de conversión para optimizar el recorrido del usuario. El proyecto incluyó prototipos interactivos, pruebas de usabilidad y un diseño adaptado a las necesidades reales del público objetivo.</p>
-        <p class="project-card__technologies">Tecnologías: React, Figma</p>
-      </article>
-      <article class="project-card">
-        <time class="project-card__date" datetime="2024-10-10">10 de octubre 2024</time>
-        <h3 class="project-card__title">Modelo 3D de la Estrella de la Muerte</h3>
-        <p class="project-card__description">Escena 3D interactiva desarrollada con Three.js, donde se recrea la Estrella de la Muerte con detalles geométricos, rotación animada, texturas y efectos de iluminación. El proyecto exploró conceptos como modelado, materiales, sombras dinámicas y cámara orbital, cumpliendo los criterios de interactividad y realismo propuestos en la rúbrica de la materia. Fue diseñado para ejecutarse en navegador y mostrar el potencial de las tecnologías WebGL aplicadas al modelado tridimensional.</p>
-        <p class="project-card__technologies">Tecnologías: Three.js</p>
-      </article>
-      <article class="project-card">
-        <time class="project-card__date" datetime="2024-11-04">4 de marzo 2025</time>
-        <h3 class="project-card__title">Controlador de Reproductor de Música por Gestos</h3>
-        <p class="project-card__description">Prototipo funcional desarrollado en Python que permite controlar un reproductor de música mediante gestos de la mano reconocidos en tiempo real por la cámara. El modelo de clasificación fue entrenado desde cero con Teachable Machine, utilizando gestos personalizados para ejecutar acciones como reproducir, pausar, adelantar o retroceder canciones. El sistema se ejecuta localmente y demuestra la integración entre visión por computadora y control multimedia sin contacto.</p>
-        <p class="project-card__technologies">Tecnologías: Python, Teacheable Machine</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="blog" id="blog">
-    <h2 class="blog__title">Artículos Recientes</h2>
-    <div class="blog__grid" id="blogGrid">
-    </div>
-  </section>
-
-  <!-- Sobre mí -->
-  <section class="about" id="sobre-mi">
-    <h2 class="about__title">Sobre mí</h2>
-    <div class="about__container">
-      <div class="about__column">
-        <div class="about__subsection">
-          <h3 class="about__subsection-title">Perfil Profesional</h3>
-          <p class="about__text">Estudiante de Ingeniería de Software con enfoque en el desarrollo de soluciones tecnológicas eficientes y escalables. Me encuentro en constante aprendizaje de metodologías y herramientas modernas de programación.</p>
-        </div>
-        <div class="about__subsection">
-          <h3 class="about__subsection-title">Hobbies</h3>
-          <ul class="about__list">
-            <li class="about__list-item">Música, cine</li>
-          </ul>
-        </div>
+  <!-- Plantilla para Proyectos -->
+  <template id="proyectos-template">
+    <section class="projects" id="proyectos">
+      <h2 class="projects__title">Proyectos Destacados</h2>
+      <div class="projects__grid">
+        <article class="project-card">
+          <time class="project-card__date" datetime="2024-06-04">4 de junio 2024</time>
+          <h3 class="project-card__title">Absorb – Tienda Web de Instrumentos Musicales</h3>
+          <p class="project-card__description">Una tienda e-commerce diseñada para ofrecer una experiencia de compra clara, confiable y enfocada en músicos jóvenes. Utilicé React y Figma para crear una interfaz intuitiva, categorizada mediante card sorting cerrado y validada con entrevistas cualitativas. Apliqué principios de usabilidad (Nielsen, Tognazzini) y metodologías como los 7 niveles de conversión para optimizar el recorrido del usuario. El proyecto incluyó prototipos interactivos, pruebas de usabilidad y un diseño adaptado a las necesidades reales del público objetivo.</p>
+          <p class="project-card__technologies">Tecnologías: React, Figma</p>
+        </article>
+        <article class="project-card">
+          <time class="project-card__date" datetime="2024-10-10">10 de octubre 2024</time>
+          <h3 class="project-card__title">Modelo 3D de la Estrella de la Muerte</h3>
+          <p class="project-card__description">Escena 3D interactiva desarrollada con Three.js, donde se recrea la Estrella de la Muerte con detalles geométricos, rotación animada, texturas y efectos de iluminación. El proyecto exploró conceptos como modelado, materiales, sombras dinámicas y cámara orbital, cumpliendo los criterios de interactividad y realismo propuestos en la rúbrica de la materia. Fue diseñado para ejecutarse en navegador y mostrar el potencial de las tecnologías WebGL aplicadas al modelado tridimensional.</p>
+          <p class="project-card__technologies">Tecnologías: Three.js</p>
+        </article>
+        <article class="project-card">
+          <time class="project-card__date" datetime="2024-11-04">4 de marzo 2025</time>
+          <h3 class="project-card__title">Controlador de Reproductor de Música por Gestos</h3>
+          <p class="project-card__description">Prototipo funcional desarrollado en Python que permite controlar un reproductor de música mediante gestos de la mano reconocidos en tiempo real por la cámara. El modelo de clasificación fue entrenado desde cero con Teachable Machine, utilizando gestos personalizados para ejecutar acciones como reproducir, pausar, adelantar o retroceder canciones. El sistema se ejecuta localmente y demuestra la integración entre visión por computadora y control multimedia sin contacto.</p>
+          <p class="project-card__technologies">Tecnologías: Python, Teacheable Machine</p>
+        </article>
       </div>
-      <div class="about__column">
-        <div class="about__subsection">
-          <h3 class="about__subsection-title">Educación</h3>
-          <ul class="about__list">
-            <li class="about__list-item">Ingeniería de Software - Universidad Catolica (En curso)</li>
-          </ul>
+    </section>
+  </template>
+
+  <!-- Plantilla para Blog -->
+  <template id="blog-template">
+    <section class="blog" id="blog">
+      <h2 class="blog__title">Artículos Recientes</h2>
+      <div class="blog__grid" id="blogGrid">
+        <!-- El contenido del blog se cargará aquí dinámicamente -->
+      </div>
+    </section>
+  </template>
+
+  <!-- Plantilla para Sobre Mí -->
+  <template id="sobre-mi-template">
+    <section class="about" id="sobre-mi">
+      <h2 class="about__title">Sobre mí</h2>
+      <div class="about__container">
+        <div class="about__column">
+          <div class="about__subsection">
+            <h3 class="about__subsection-title">Perfil Profesional</h3>
+            <p class="about__text">Estudiante de Ingeniería de Software con enfoque en el desarrollo de soluciones tecnológicas eficientes y escalables. Me encuentro en constante aprendizaje de metodologías y herramientas modernas de programación.</p>
+          </div>
+          <div class="about__subsection">
+            <h3 class="about__subsection-title">Hobbies</h3>
+            <ul class="about__list">
+              <li class="about__list-item">Música, cine</li>
+            </ul>
+          </div>
         </div>
-        <div class="about__subsection">
-          <h3 class="about__subsection-title">Experiencia</h3>
-          <ul class="about__list">
-            <li class="about__list-item">Desarrollo de proyectos académicos de software</li>
-            <li class="about__list-item">Prácticas de programación Frontend y Backend</li>
-          </ul>
-        </div>
-        <div class="about__subsection">
-          <h3 class="about__subsection-title">Skills</h3>
-          <div class="about__skills-container">
-             <span class="about__skill-tag">HTML</span>
-             <span class="about__skill-tag">CSS</span>
-             <span class="about__skill-tag">JavaScript</span>
-             <span class="about__skill-tag">Figma</span>
-             <span class="about__skill-tag">Node.js</span>
-             <span class="about__skill-tag">Express</span>
-             <span class="about__skill-tag">MongoDB</span>
-             <span class="about__skill-tag">Git</span>
-             <span class="about__skill-tag">GitHub</span>
-             <span class="about__skill-tag">VS Code</span>
+        <div class="about__column">
+          <div class="about__subsection">
+            <h3 class="about__subsection-title">Educación</h3>
+            <ul class="about__list">
+              <li class="about__list-item">Ingeniería de Software - Universidad Catolica (En curso)</li>
+            </ul>
+          </div>
+          <div class="about__subsection">
+            <h3 class="about__subsection-title">Experiencia</h3>
+            <ul class="about__list">
+              <li class="about__list-item">Desarrollo de proyectos académicos de software</li>
+              <li class="about__list-item">Prácticas de programación Frontend y Backend</li>
+            </ul>
+          </div>
+          <div class="about__subsection">
+            <h3 class="about__subsection-title">Skills</h3>
+            <div class="about__skills-container">
+               <span class="about__skill-tag">HTML</span>
+               <span class="about__skill-tag">CSS</span>
+               <span class="about__skill-tag">JavaScript</span>
+               <span class="about__skill-tag">Figma</span>
+               <span class="about__skill-tag">Node.js</span>
+               <span class="about__skill-tag">Express</span>
+               <span class="about__skill-tag">MongoDB</span>
+               <span class="about__skill-tag">Git</span>
+               <span class="about__skill-tag">GitHub</span>
+               <span class="about__skill-tag">VS Code</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </template>
 
-  <!-- Contacto -->
-  <section class="contact" id="contacto">
-    <div class="contact__card-wrapper">
-      <h2 class="contact__title">Contacto</h2>
-      <form action="#" method="POST" class="contact__form">
-        <label class="contact__label" for="name">Nombre</label>
-        <input class="contact__input" type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+  <!-- Plantilla para Contacto -->
+  <template id="contacto-template">
+    <section class="contact" id="contacto">
+      <div class="contact__card-wrapper">
+        <h2 class="contact__title">Contacto</h2>
+        <form action="#" method="POST" class="contact__form">
+          <label class="contact__label" for="name">Nombre</label>
+          <input class="contact__input" type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
 
-        <label class="contact__label" for="email">Correo electrónico</label>
-        <input class="contact__input" type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+          <label class="contact__label" for="email">Correo electrónico</label>
+          <input class="contact__input" type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
 
-        <label class="contact__label" for="message">Mensaje</label>
-        <textarea class="contact__textarea" id="message" name="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+          <label class="contact__label" for="message">Mensaje</label>
+          <textarea class="contact__textarea" id="message" name="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
 
-        <button class="contact__button" type="submit">Enviar</button>
-      </form>
+          <button class="contact__button" type="submit">Enviar</button>
+        </form>
 
-      <div class="contact__social">
-        <a class="contact__social-link" href="https://github.com/Parcibal12" target="_blank">
-          <img class="contact__social-icon" src="images/github.svg" alt="GitHub">
-        </a>
-        <a class="contact__social-link" href="https://www.linkedin.com/in/daniel-irigoyen-miranda-52628935b/" target="_blank">
-          <img class="contact__social-icon" src="images/LinkedIn_icon.svg.png" alt="LinkedIn">
-        </a>
+        <div class="contact__social">
+          <a class="contact__social-link" href="https://github.com/Parcibal12" target="_blank">
+            <img class="contact__social-icon" src="images/github.svg" alt="GitHub">
+          </a>
+          <a class="contact__social-link" href="https://www.linkedin.com/in/daniel-irigoyen-miranda-52628935b/" target="_blank">
+            <img class="contact__social-icon" src="images/LinkedIn_icon.svg.png" alt="LinkedIn">
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </template>
+
+  <!-- Contenedor principal para el router -->
+  <main id="app-content">
+    <!-- El contenido de la ruta activa se insertará aquí -->
+  </main>
 
   <footer class="footer">
     <div class="footer__container">
@@ -164,7 +182,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/blog.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
