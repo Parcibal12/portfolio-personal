@@ -28,19 +28,22 @@
 </head>
 <body>
 
+  <header id="main-header">
+    <nav class="hero__nav">
+      <ul class="hero__nav-list">
+        <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/">Inicio</a></li>
+        <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/proyectos">Proyectos</a></li>
+        <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/blog">Blog</a></li>
+        <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/sobre-mi">Sobre mí</a></li>
+        <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <!-- Plantilla para Hero -->
   <template id="hero-template">
     <header class="hero" id="hero">
-      <nav class="hero__nav">
-        <ul class="hero__nav-list">
-          <!-- Rutas actualizadas -->
-          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/">Inicio</a></li>
-          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/proyectos">Proyectos</a></li>
-          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/blog">Blog</a></li>
-          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/sobre-mi">Sobre mí</a></li>
-          <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/contacto">Contacto</a></li>
-        </ul>
-      </nav>
+
       <div class="hero__content">
         <div class="hero__text">
           <h1 class="hero__title">Hola, soy Daniel Irigoyen</h1>
@@ -83,7 +86,6 @@
     <section class="blog" id="blog">
       <h2 class="blog__title">Artículos Recientes</h2>
       <div class="blog__grid" id="blogGrid">
-        <!-- El contenido del blog se cargará aquí dinámicamente -->
       </div>
     </section>
   </template>
@@ -169,9 +171,7 @@
     </section>
   </template>
 
-  <!-- Contenedor principal para el router -->
   <main id="app-content">
-    <!-- El contenido de la ruta activa se insertará aquí -->
   </main>
 
   <footer class="footer">
