@@ -1,0 +1,6 @@
+class BlogPostCard extends HTMLElement {
+    
+
+
+
+}

@@ -10,7 +10,7 @@ const blogApiInstance = new ObservableBlogApi();
 
 async function fetchAndCacheBlogs() {
     try {
-        const response = await fetch('../data/blogs.json');
+        const response = await fetch('/data/blogs.json');
         const data = await response.json();
         LocalStorage.save(BLOGS_STORAGE_KEY, data.results);
         blogApiInstance.notify(data.results);

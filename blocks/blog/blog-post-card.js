@@ -16,7 +16,6 @@ class BlogPostCard extends HTMLElement {
                 <div class="blog-card__technologies"></div>
             </article>
         `;
-
         shadowRoot.appendChild(style);
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
