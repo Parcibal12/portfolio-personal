@@ -1,6 +1,9 @@
 import Router from './services/Router.js';
+import { initBlogPage } from './services/blog.js';
+import { initSavedItemsPage } from './services/savedItemsPage.js'; // Importar la nueva función
 
-document.addEventListener('DOMContentLoaded', function() {
+// Cambiar 'DOMContentLoaded' a 'window.onload'
+window.onload = function() {
 
     const backToTopLink = document.querySelector('.footer__link[href="#top"]');
     if (backToTopLink) {
@@ -13,6 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
     
-    Router.init();
+    Router.init({
+        '/': 'hero-template',
+        '/proyectos': 'proyectos-template',
+        '/blog': initBlogPage,
+        '/guardados': initSavedItemsPage,
+        '/sobre-mi': 'sobre-mi-template',
+        '/contacto': 'contacto-template'
+    });
 
-});
+    // Asegurarse de que Router.go se llama después de que todo esté cargado
+    Router.go(location.pathname);
+
+};

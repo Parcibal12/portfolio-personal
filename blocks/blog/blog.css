@@ -105,6 +105,7 @@
 
 .blog-card__button i {
   font-size: 16px;
+  margin-right: 5px;
 }
 
 @media (max-width: 480px) {

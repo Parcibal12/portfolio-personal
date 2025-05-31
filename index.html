@@ -36,6 +36,7 @@
         <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/blog">Blog</a></li>
         <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/sobre-mi">Sobre mí</a></li>
         <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/contacto">Contacto</a></li>
+        <li class="hero__nav-item"><a class="hero__nav-link router-link" href="/guardados">Guardados</a></li>
       </ul>
     </nav>
   </header>
@@ -164,6 +165,17 @@
         </div>
       </div>
     </section>
+  </template>
+
+  <template id="saved-items-template">
+      <section id="saved-items-section" class="saved-items-section">
+          <div class="container">
+              <h2>Mis Artículos Guardados</h2>
+              <div id="saved-items-container" class="blog__grid">
+              </div>
+              <p id="no-saved-items-message" style="display: none;">No hay artículos guardados para mostrar.</p>
+          </div>
+      </section>
   </template>
 
   <main id="app-content">

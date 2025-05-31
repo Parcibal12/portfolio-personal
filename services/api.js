@@ -59,9 +59,10 @@ export async function toggleGuardar(id) {
 }
 
 export async function obtenerEntrada(id) {
-    const blogs = await await cargarEntradasBlog();
+    const blogs = await cargarEntradasBlog();
     return blogs.find(blog => blog.id === id);
 }
 
 
 export const blogApi = blogApiInstance;
+blogApi.cargarEntradasBlog = cargarEntradasBlog; // ¡Asegúrate de que esta línea esté presente!

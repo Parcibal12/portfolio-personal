@@ -1,7 +1,10 @@
-import { initBlogPage } from './blog.js'; 
+import { initBlogPage } from './blog.js';
+import { initSavedItemsPage } from './savedItemsPage.js';
 
 const Router = {
-    init() {
+    routes: {},
+    init: function(routes) {
+        this.routes = routes;
         const links = document.querySelectorAll("a.router-link");
         links.forEach((link) => {
             link.addEventListener("click", (event) => {
@@ -16,19 +19,24 @@ const Router = {
             this.go(route, false, false);
         });
 
-        const initialRoute = location.pathname;
-        this.go(initialRoute, false, true);
+        window.addEventListener('popstate', () => {
+            this.go(location.pathname, false);
+        });
+
+        // REMOVER esta línea
+        // this.go(location.pathname);
     },
+    go: function(path, addToHistory = true) {
+        let effectiveRoute = path; // Usar 'path' en lugar de 'route'
 
-    go(route, saveToHistory = false, isInitialLoad = false) {
-        let effectiveRoute = route;
-
-        if (isInitialLoad && typeof route === 'string' && route.endsWith('/index.html')) {
+        // isInitialLoad no está definida, asumo que quieres manejar la carga inicial de la página
+        // Si la ruta es '/index.html', la tratamos como '/'
+        if (typeof path === 'string' && path.endsWith('/index.html')) {
             effectiveRoute = '/';
         }
 
-        if (saveToHistory) {
-            history.pushState({ route: route }, "", route);
+        if (addToHistory) { // Usar 'addToHistory' en lugar de 'saveToHistory'
+            history.pushState({ route: effectiveRoute }, "", effectiveRoute);
         }
 
         const mainContentArea = document.getElementById('app-content');
@@ -52,6 +60,10 @@ const Router = {
                 templateId = 'blog-template';
                 sectionInitializer = initBlogPage;
                 break;
+            case '/guardados': // Nueva ruta para artículos guardados
+                templateId = 'saved-items-template';
+                sectionInitializer = initSavedItemsPage; // Función para inicializar la página de guardados
+                break;
             case '/sobre-mi':
                 templateId = 'sobre-mi-template';
                 break;
@@ -65,6 +77,12 @@ const Router = {
 
         if (templateId) {
             const template = document.getElementById(templateId);
+            
+            // Añadir este log para diagnóstico
+            if (templateId === 'saved-items-template') {
+                console.log(`Diagnóstico Router.go: Intentando encontrar plantilla con ID '${templateId}'. Elemento encontrado:`, template);
+            }
+
             if (template) {
                 const clonedContent = template.content.cloneNode(true);
                 mainContentArea.appendChild(clonedContent);
