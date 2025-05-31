@@ -1,0 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primario: #0255E5;
+  --color-secundario: #ffffff;
+  --color-fondo: #F5F6F7;
+  --color-texto: #333333;
+  --color-borde: #dddddd;
+  --font-base: 'Inter', sans-serif;
+  --espacio-pequeño: 0.5rem;
+  --espacio-medio: 1rem;
+  --espacio-grande: 2rem;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+
+#app-content {
+  padding-top: 80px;
+}
